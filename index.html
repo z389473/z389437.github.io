@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows 11 JS Emulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="desktop">
+      <div class="desktop-icons" aria-label="Desktop apps">
+        <button class="desktop-icon" data-app="explorer">
+          <span class="icon-folder">📁</span>
+          <span class="label">This PC</span>
+        </button>
+        <button class="desktop-icon" data-app="browser">
+          <span class="icon-folder">🌐</span>
+          <span class="label">Browser</span>
+        </button>
+        <button class="desktop-icon" data-app="notepad">
+          <span class="icon-folder">📝</span>
+          <span class="label">Notepad</span>
+        </button>
+        <button class="desktop-icon" data-app="terminal">
+          <span class="icon-folder">💻</span>
+          <span class="label">Terminal</span>
+        </button>
+      </div>
+
+      <div id="windows-layer" aria-live="polite"></div>
+    </div>
+
+    <div id="taskbar" class="taskbar">
+      <button id="start-button" class="start-button" aria-label="Open Start menu">
+        <span class="windows-logo" aria-hidden="true">
+          <span class="win-block win-block-1"></span>
+          <span class="win-block win-block-2"></span>
+          <span class="win-block win-block-3"></span>
+          <span class="win-block win-block-4"></span>
+        </span>
+      </button>
+
+      <div id="taskbar-apps" class="taskbar-apps"></div>
+
+      <div class="system-tray">
+        <button class="tray-icon" aria-label="Language">ENG</button>
+        <button class="tray-icon" aria-label="Battery">🔋 100%</button>
+        <div id="clock" class="clock" aria-live="polite">12:00 PM</div>
+      </div>
+    </div>
+
+    <div id="start-menu" class="start-menu hidden" aria-label="Start menu">
+      <div class="start-menu-panel">
+        <div class="start-search">
+          <span>Search</span>
+        </div>
+
+        <div class="start-grid">
+          <button class="start-item" data-app="explorer">
+            <span class="start-item-icon">📁</span>
+            <span>Explorer</span>
+          </button>
+          <button class="start-item" data-app="browser">
+            <span class="start-item-icon">🌐</span>
+            <span>Edge</span>
+          </button>
+          <button class="start-item" data-app="notepad">
+            <span class="start-item-icon">📝</span>
+            <span>Notepad</span>
+          </button>
+          <button class="start-item" data-app="terminal">
+            <span class="start-item-icon">💻</span>
+            <span>Terminal</span>
+          </button>
+          <button class="start-item" data-app="settings">
+            <span class="start-item-icon">⚙️</span>
+            <span>Settings</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
